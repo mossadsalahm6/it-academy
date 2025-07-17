@@ -1,0 +1,821 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0,123,255,0.9), rgba(0,86,179,0.9)), url('images/background_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-icons {
+    margin-bottom: 2rem;
+}
+
+.hero-icons i {
+    font-size: 4rem;
+    margin: 0 2rem;
+    color: #fff;
+}
+
+.hero-section h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(40,167,69,0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(40,167,69,0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Animation Classes */
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-out;
+}
+
+.slide-in-up {
+    animation: slideInUp 1s ease-out;
+}
+
+.bounce-in {
+    animation: bounceIn 1s ease-out;
+}
+
+.zoom-in {
+    animation: zoomIn 1s ease-out;
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.pulse-btn {
+    animation: pulse 2s infinite;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+/* Main Content */
+main {
+    padding: 0;
+}
+
+.section-padding {
+    padding: 4rem 0;
+}
+
+.bg-light {
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #0056b3;
+    position: relative;
+}
+
+h2 i {
+    margin-left: 1rem;
+    color: #007bff;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #007bff, #28a745);
+    border-radius: 2px;
+}
+
+/* Why Important Section */
+.reasons {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.reason-card {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px);
+}
+
+.reason-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.reason-card p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Course Details Section */
+.courses-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.course-item {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-10px);
+}
+
+.course-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.course-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.course-item h3 {
+    color: #007bff;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.course-item h3 i {
+    margin-left: 0.5rem;
+}
+
+.course-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-item ul li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-right: 30px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.course-item ul li:hover {
+    color: #007bff;
+}
+
+.course-item ul li i {
+    position: absolute;
+    right: 0;
+    color: #28a745;
+    width: 20px;
+}
+
+/* Info Cards Section */
+.info-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.info-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.info-card p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.price {
+    font-size: 1.5rem !important;
+}
+
+.new-price {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #dc3545;
+    font-size: 1.2rem;
+}
+
+/* Location Section */
+.location-card {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: #fff;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.location-card i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.location-card p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Contact Section */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.contact-item p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.contact-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0056b3;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.payment-item {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.payment-item:hover {
+    transform: translateY(-5px);
+}
+
+.payment-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.payment-icon.instapay {
+    color: #ff6b35;
+}
+
+.payment-icon.vodafone {
+    color: #e60000;
+}
+
+.instapay-link {
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.instapay-link:hover {
+    transform: scale(1.05);
+}
+
+.vodafone-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.vodafone-link {
+    background: linear-gradient(45deg, #e60000, #cc0000);
+    color: #fff !important;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.vodafone-link:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-group-link {
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    color: #fff !important;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.whatsapp-group-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(37,211,102,0.4);
+}
+
+/* Registration Form Styles */
+.call-to-action {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #dc3545;
+    margin-bottom: 2rem;
+    animation: pulse 2s infinite;
+}
+
+.registration-form {
+    background: linear-gradient(135deg, #fff, #f8f9/* Registration Button Styles */
+.registration-button-container {
+    text-align: center;
+    margin: 3rem 0;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.registration-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.registration-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.registration-button:hover:before {
+    left: 100%;
+}
+
+.registration-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #20c997, #28a745);
+}
+
+.registration-button i {
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+
+.registration-note {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .registration-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+}ckground: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .courses-details,
+    .reasons,
+    .info-cards {
+        flex-direction: column;
+    }
+
+    .course-item,
+    .reason-card,
+    .info-card {
+        margin-bottom: 2rem;
+    }
+
+    .section-padding {
+        padding: 2rem 0;
+    }
+
+    .hero-icons i {
+        font-size: 2.5rem;
+        margin: 0 1rem;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .vodafone-numbers {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+/* Registration Form Styles */
+.registration-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .courses-details {
+        flex-direction: column;
+    }
+
+    .course-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-padding {
+        padding: 2rem 0;
+    }
+}
+
+
