@@ -23,7 +23,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, rgba(0,123,255,0.9), rgba(0,86,179,0.9)), url('images/background_hero.jpg');
+    background: linear-gradient(135deg, rgba(0,123,255,0.9), rgba(0,86,179,0.9)), url('background_hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
